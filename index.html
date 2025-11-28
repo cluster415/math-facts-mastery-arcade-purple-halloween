@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Facts Mastery Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'halloween-bg': '#2B2A33',
+              'halloween-purple': '#A18CFF',
+              'halloween-yellow': '#FFB700',
+              'halloween-blue': '#1E2B68',
+              'halloween-red': '#E24E4E',
+              'halloween-green': '#99FFB0',
+              'halloween-dark': '#1a1a1f',
+              'halloween-dark-border': 'rgba(255, 255, 255, 0.1)',
+            },
+            fontFamily: {
+              sans: ['Poppins', 'system-ui', '-apple-system', "Segoe UI", 'Roboto', "Helvetica Neue", 'Arial', 'sans-serif'],
+              display: ['Creepster', 'cursive'],
+            },
+            borderRadius: {
+              sm: '8px',
+              md: '16px',
+              lg: '20px',
+              xl: '24px'
+            },
+            boxShadow: {
+              'panel': '0 10px 30px rgba(0, 0, 0, 0.6)',
+              'glow-yellow': '0 0 16px rgba(255, 183, 0, 0.6)',
+              'glow-purple': '0 0 16px rgba(161, 140, 255, 0.6)',
+              'glow-red': '0 0 16px rgba(226, 78, 78, 0.6)',
+            },
+             keyframes: {
+               shake: {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-8px)' },
+                '20%, 40%, 60%, 80%': { transform: 'translateX(8px)' },
+              },
+               pulse: {
+                '0%, 100%': { transform: 'scale(1)', opacity: 1 },
+                '50%': { transform: 'scale(1.03)', opacity: 0.95 },
+               },
+            },
+            animation: {
+              shake: 'shake 0.3s ease-in-out',
+              pulse: 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
+  }
+}
+</script>
+</head>
+  <body class="bg-halloween-bg text-white font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
